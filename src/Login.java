@@ -115,18 +115,21 @@ public class Login
                 {
                     return true;
                 }
-                else
-                {
-                return false;
-                }
             }
+        return false;
         }
 
     //------------------------------------------//
     //check for number in password method
     public static boolean checkPasswordNumeric(String password)
         {
-            Boolean.parseBoolean(password);
-         
+            Boolean.parseBoolean(password);            
+
+            //Convert string to char array
+            char[] passwordArray = new password.toCharArray();
+
+            //Check passwordArray for numbers
+          
+
         }
     }
