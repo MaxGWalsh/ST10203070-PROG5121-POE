@@ -1,5 +1,5 @@
 import javax.swing.JOptionPane;
-
+//POE Part 1
 // @author Maximilian Walsh ST10203070
 public class Login
     {
@@ -23,7 +23,7 @@ public class Login
     //Using JOptionPane to get user's password
         password = JOptionPane.showInputDialog(null, "Please enter your password: ", "Create an account", JOptionPane.DEFAULT_OPTION);
     
-    //Creating if statement to ensure that username and password entered is correctly formatted in order for program to continue
+    //Creating if statement to ensure that username and password entered is correctly formatted in order for program to continue 
         if(checkUserName(username)==true && checkPasswordComplexity(password)==true)
         {
             System.out.println("Username successfully captured");
@@ -243,3 +243,4 @@ public class Login
         }
     //-----------------End-----------------//
     }
+//-----------------END OF PROGRAM-----------------//
