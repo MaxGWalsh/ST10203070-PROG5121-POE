@@ -30,7 +30,7 @@ jobs:
         run: ls
      # Compiles classes to test 
       - name: compile classes
-        working-directory: ./src/prog5121poe
+        working-directory: ./src/st10203070
         run: javac -cp "../../testresources/junit-platform-console-standalone-1.8.2.jar" ./st10203070/Login.java ./st10203070/Message.java "../../test/st10203070/LoginTest.java"  "../../test/st10203070/MessageTest.java"  
 
     # list contents of src to verify that classess compiled 
