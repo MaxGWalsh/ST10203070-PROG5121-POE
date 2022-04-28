@@ -31,32 +31,32 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src/st10203070
-        run: javac -cp "../../testresources/junit-platform-console-standalone-1.8.2.jar" ./st10203070/Login.java ./st10203070/Message.java "../../Test Packages/st10203070/LoginTest.java"  "../../Test Packages/st10203070/MessageTest.java"  
+        run: javac -cp "../../testresources/junit-platform-console-standalone-1.8.2.jar" ./src/st10203070/Login.java ./src/st10203070/Message.java "../../test/st10203070/LoginTest.java"  "../../test/st10203070/MessageTest.java"  
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
-        working-directory: ./Source Packages/st10203070
+        working-directory: ./src/st10203070
         run: ls
         
         
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
-        working-directory: ./Source Packages/st10203070
+        working-directory: ./src/st10203070
         run: cp -t  "../../test/st10203070" Message.class Login.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
-        working-directory: ./Test Packages/st10203070
+        working-directory: ./src/st10203070
         run: cp -t  "../../ST10203070/" Message.class Login.class
         
         # list contents or directory
       - name: List contents test package
-        working-directory: ./Test Packages/st10203070
+        working-directory: ./test/st10203070
         run: ls
         
         #run Message Class tests and output report 
       - name: run Messages Class tests and create report 
-        working-directory: ./Test Packages
+        working-directory: ./test
         run: |
          ls
          java -jar  "../testresources/junit-platform-console-standalone-1.6.0.jar" -cp "." --select-class  st10203070.MessageTest  st10203070.LoginTest
