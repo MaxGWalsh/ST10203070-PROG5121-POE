@@ -24,5 +24,22 @@ public class MessageTest
 
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void testCheckMessageFormat()
+    {
+        assertTrue(message.checkMessageFormat());
+    }
+
+    @Test
+    public void testCheckNumSuccess()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            String expected = "Perfect numbers";
+            String actual = message.checkNum(i);
+            assertEquals(expected,actual);
+        }
+    }
     
 }
