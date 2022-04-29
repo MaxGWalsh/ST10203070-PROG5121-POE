@@ -61,7 +61,7 @@ jobs:
          ls
          java -jar  "../../testresources/junit-platform-console-standalone-1.8.2.jar" -cp "." --select-class  st10203070.MessageTest  
          
-            #run Message Class tests and output report 
+            #run Response Class tests and output report 
       - name: run Response Class tests and create report 
         working-directory: ./test
         run: |
